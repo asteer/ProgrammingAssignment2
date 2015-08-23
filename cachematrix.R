@@ -3,19 +3,21 @@
 ## Fuctions are based on example code from Coursera course rprog-031
 ## https://class.coursera.org/rprog-031/human_grading/view/courses/975105/assessments/3/submissions
 
+##example run 
+## first command a<-makeCacheMatrix(matrix(c(2,3,2,2),2,2)) (to create matrix and store in object a)
+## second command cacheSolve(a) (to solve the inverse matrix or retrieve the already stored value)
 
-## first function (makeCacheMatrix) creates a vector in which 
-## to store the inverse value
+## first function (makeCacheMatrix) creates a vector (x)  
+## and a place to store the inverse (s object)
 
-
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) { 
         s <- NULL
         set <- function(y) {
                 x <<- y
                 s <<- NULL
         }
         get <- function() x
-        setsolve <- function(mean) s <<- solve
+        setsolve <- function(solve) s <<- solve
         getsolve <- function() s
         list(set = set, get = get,
              setsolve = setsolve,
